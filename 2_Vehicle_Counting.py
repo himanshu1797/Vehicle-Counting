@@ -119,15 +119,15 @@ while True:
         #cv2.imshow('tracking', resized_frame)
 
         frame_counter += 1
-
+        cv2.imwrite(os.path.join('screenshots', 'ss_' + uuid.uuid4().hex + '.png'), frame)
         # save frame if 's' key is pressed
-        if k & 0xFF == ord('s'):
-            cv2.imwrite(os.path.join('screenshots', 'ss_' + uuid.uuid4().hex + '.png'), frame)
-            print('Screenshot taken.')
-    else:
-        print('End of video.')
+        #if k & 0xFF == ord('s'):
+            #cv2.imwrite(os.path.join('screenshots', 'ss_' + uuid.uuid4().hex + '.png'), frame)
+            #print('Screenshot taken.')
+    #else:
+        #print('End of video.')
         # end video loop if on the last frame
-        break
+        #break
 
     # end video loop if 'q' key is pressed
     if k & 0xFF == ord('q'):
