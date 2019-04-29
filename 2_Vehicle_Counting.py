@@ -116,7 +116,7 @@ while True:
         cv2.putText(frame, 'Count: ' + str(vehicle_count), (20, 60), cv2.FONT_HERSHEY_DUPLEX, 2, (255, 0, 0), 2, cv2.LINE_AA)
 
         resized_frame = cv2.resize(frame, (858, 480))
-        cv2.imshow('tracking', resized_frame)
+        #cv2.imshow('tracking', resized_frame)
 
         frame_counter += 1
 
