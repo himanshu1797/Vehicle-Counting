@@ -8,7 +8,7 @@ import os
 import contextlib
 from datetime import datetime
 
-
+count = 0
 log_file_name = 'log.txt'
 with contextlib.suppress(FileNotFoundError):
     os.remove(log_file_name)
@@ -119,7 +119,8 @@ while True:
         #cv2.imshow('tracking', resized_frame)
 
         frame_counter += 1
-        cv2.imwrite(os.path.join('screenshots', 'ss_' + uuid.uuid4().hex + '.png'), frame)
+        count+=1
+        cv2.imwrite(os.path.join('screenshots', 'ss_' + str(count) + '.png'), frame)
         # save frame if 's' key is pressed
         #if k & 0xFF == ord('s'):
             #cv2.imwrite(os.path.join('screenshots', 'ss_' + uuid.uuid4().hex + '.png'), frame)
