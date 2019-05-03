@@ -10,7 +10,7 @@ def get_bounding_boxes(image):
     classes = None
     with open(os.path.join(__location__, 'classes.txt'), 'r') as classes_file:
         classes = [line.strip() for line in classes_file.readlines()]
-    classes_of_interest = ['bicycle', 'car', 'motorcycle', 'bus', 'truck']
+    classes_of_interest = ['person', 'car', 'motorcycle', 'bus', 'truck']
     
     # create a YOLO v3 DNN model using pre-trained weights
     net = cv2.dnn.readNet(
